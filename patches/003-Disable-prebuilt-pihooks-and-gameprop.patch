@@ -1,0 +1,14 @@
+diff --git a/prebuilts.mk b/prebuilts.mk
+index 4d0c370..47e3bca 100644
+--- a/prebuilts.mk
++++ b/prebuilts.mk
+@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
+     GlanceableHubSysuiConfigOverlay
+ 
+ # Pif
+-include vendor/extras/pif/pif.mk
++# include vendor/extras/pif/pif.mk
+ 
+ # GameProps
+-TARGET_PRODUCT_PROP += vendor/extras/gameprops/gameprops.prop
++# TARGET_PRODUCT_PROP += vendor/extras/gameprops/gameprops.prop

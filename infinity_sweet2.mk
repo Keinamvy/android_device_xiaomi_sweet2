@@ -13,12 +13,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sweet2/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-# Build MindTheGApps if exist
-$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
-
-PRODUCT_NAME := lineage_sweet2
+PRODUCT_NAME := infinity_sweet2
 PRODUCT_DEVICE := sweet2
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 12 Pro
@@ -29,3 +26,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="sweet_global2-user 13 TKQ1.221114.001 V816.0.13.0.THGMIXM release-keys" \
     BuildFingerprint=Redmi/sweet_global2/sweet:13/TKQ1.221114.001/V816.0.13.0.THGMIXM:user/release-keys
+
+# InfinityX
+INFINITY_MAINTAINER := "Keinamvy"
+
