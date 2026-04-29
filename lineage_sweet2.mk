@@ -15,6 +15,9 @@ $(call inherit-product, device/xiaomi/sweet2/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Build MindTheGApps if exist
+$(call inherit-product-if-exists, vendor/gapps/arm64/vendor-arm64.mk)
+
 PRODUCT_NAME := lineage_sweet2
 PRODUCT_DEVICE := sweet2
 PRODUCT_BRAND := Xiaomi
