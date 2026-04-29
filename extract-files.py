@@ -64,6 +64,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/thermald-devices.conf': blob_fixup()
+        .regex_replace(r'(#battery\n\[\nname:battery\ncooling_name:battery\ndef_target:0\nselect_higher:)1(\n\])', r'\g<1>0\g<2>'),
     'vendor/etc/init/init.batterysecret.rc': blob_fixup()
         .regex_replace(' +seclabel u:r:batterysecret:s0\n', ''),
     'vendor/etc/init/init.mi_thermald.rc': blob_fixup()
