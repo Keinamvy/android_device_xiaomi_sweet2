@@ -7,6 +7,9 @@
 # Inherit from sm6150-common
 $(call inherit-product, device/xiaomi/sm6150-common/sm6150.mk)
 
+# Remove the livedisplay service inherited from the common tree
+PRODUCT_PACKAGES := $(filter-out vendor.lineage.livedisplay-service.xiaomi_sm6150, $(PRODUCT_PACKAGES))
+
 # API level, the device has been commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 30
 
