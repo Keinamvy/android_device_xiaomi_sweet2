@@ -84,5 +84,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# Miui-Camera
+$(call inherit-product-if-exists, vendor/xiaomi/sweet2-miuicamera/sweet2-miuicamera-vendor.mk)
+
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/sweet2/sweet2-vendor.mk)
